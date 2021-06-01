@@ -37,3 +37,9 @@ History
 ------------------
 
 * Add code to make Agent's movement more accurate, refactor a bunch of public methods into protected ones, add docstrings for all canvas items, remove the creation of the canvas item objects during initialization, and remove the scaling feature
+
+
+0.2.4 (01-06-2021)
+------------------
+
+* Rename status messages in status banner, update documentation, update dependency to latest powermole library package, and add heartbeat interval value
