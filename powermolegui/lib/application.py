@@ -69,7 +69,8 @@ REMOTE_PORT_HEARTBEAT = 44193  # port on destination host for Agent to respond t
 REMOTE_PORT_TRANSFER = 44194  # port on destination host for Agent to receive raw file data
 REMOTE_PORT_COMMAND = 44195  # port on destination host for Agent to interpret Linux commands
 HOST_DEPLOY_PATH = '/tmp/'  # path on last host where the Agent will be transferred to
-DEBUG = False  # to capture the output of the child (SSH), experimental
+DEBUG = False  # set True to capture and show the output of the child (SSH) - highly experimental
+HEARTBEAT_INTERVAL = 10  # specify how often (in seconds) the state of the tunnel must be checked
 
 # Constant, grouped ports
 GROUP_PORTS = {"local_port_agent": LOCAL_PORT_AGENT,
@@ -114,7 +115,7 @@ def application(main_window):  # pylint: disable=too-many-locals
                                    client_item, host_items, agent_item, connection_items)
             setup_link.start()
             tunnel.periodically_purge_buffer()
-            with Heartbeat(GROUP_PORTS["local_port_heartbeat"]) as heartbeat:
+            with Heartbeat(GROUP_PORTS["local_port_heartbeat"], HEARTBEAT_INTERVAL) as heartbeat:
                 main_window.change_state_menu_bar_entry('send', 'Send Command', NORMAL)  # enable send/command menu bar
                 main_window.instructor = instructor  # provides methods for sending files and commands
                 animated_packet = AnimateItem(main_window, packet_item)
