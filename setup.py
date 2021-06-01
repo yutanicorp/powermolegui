@@ -41,7 +41,7 @@ setup(
     install_requires=requirements,
     license='MIT',
     zip_safe=False,
-    keywords='''powermole powermolegui ssh proxyjump forwarding tor gui''',
+    keywords='''powermole powermolegui ssh proxyjump forwarding tor gui security''',
     entry_points = {
                    'console_scripts': [
                        # enable this to automatically generate a script in /usr/local/bin called myscript that points to your
