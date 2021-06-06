@@ -514,9 +514,7 @@ class AgentCanvasItem(CanvasItem):  # pylint: disable=too-many-instance-attribut
 
     def transfer_nok(self):
         """Colours the outline red and changes the outline to have a dashed pattern."""
-        self._canvas_landscape.itemconfig(self.item_tag, dash=(5, 5))
-        self._canvas_landscape.itemconfig(self.item_tag, outline=NOK_COLOUR)
-        self._canvas_landscape.itemconfig(self.item_tag, width=THICKNESS_LINE_AGENT)
+        self._canvas_landscape.itemconfig(self.item_tag, dash=(5, 5), outline=NOK_COLOUR, width=THICKNESS_LINE_AGENT)
 
     def setup_ok(self):
         self._agent_effect.setup_ok()

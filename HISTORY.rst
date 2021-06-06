@@ -36,7 +36,7 @@ History
 0.2.3 (25-05-2021)
 ------------------
 
-* Redraw Agent's movement to be more accurate, refactor a bunch of public methods into protected ones, document docstrings for all canvas items, remove the creation of the canvas item objects during initialization, remove the scaling feature
+* Redraw Agent's movement to be more accurate, refactor a bunch of public methods into protected ones, add docstrings for all canvas items, remove the creation of the canvas item objects during initialization, remove the scaling feature
 
 
 0.2.4 (01-06-2021)

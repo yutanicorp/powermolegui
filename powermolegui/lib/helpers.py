@@ -272,7 +272,7 @@ class SetupLink(LoggerMixin):  # pylint: disable=too-many-instance-attributes
             elif index > 0 and self._transfer_agent.all_host_addr[index] in self._transfer_agent.authenticated_hosts:
                 self._agent_item.move()  # blocking
                 index += 1
-            if self._is_terminate_query_ssh:
+            if self._is_terminate_query_scp:
                 break
             sleep(0.1)  # otherwise, tk might behaves erratic
 
