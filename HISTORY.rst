@@ -43,3 +43,9 @@ History
 ------------------
 
 * Reword status messages in status banner, reword documentation, bump dependency to latest powermole library package, add feature to set heartbeat interval value
+
+
+0.2.5 (06-06-2021)
+------------------
+
+* Bump dependency to latest powermole library package, fix bug to terminate the right thread, redraw animation for demo purposes, reword commit messages, add instructions how to execute powermolegui, reword list of keywords for PyPi
