@@ -49,3 +49,9 @@ History
 ------------------
 
 * Bump dependency to latest powermole library package, fix bug to terminate the right thread, redraw animation for demo purposes, reword commit messages associated with releases, add instructions how to execute powermolegui, reword list of keywords for PyPi
+
+
+0.2.6 (02-12-2021)
+------------------
+
+* Bump dependency to latest powermole library package
