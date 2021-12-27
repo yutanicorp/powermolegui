@@ -33,13 +33,13 @@ Manages the version of the package.
 
 import os
 
-__author__ = '''Vincent Schouten <inquiry@intoreflection.co>'''
+__author__ = '''Vincent Schouten <powermole@protonmail.com>'''
 __docformat__ = '''google'''
 __date__ = '''08-10-2020'''
 __copyright__ = '''Copyright 2020, Vincent Schouten'''
 __license__ = '''MIT'''
 __maintainer__ = '''Vincent Schouten'''
-__email__ = '''<inquiry@intoreflection.co>'''
+__email__ = '''<powermole@protonmail.com>'''
 __status__ = '''Development'''  # "Prototype", "Development", "Production".
 
 VERSION_FILE_PATH = os.path.abspath(

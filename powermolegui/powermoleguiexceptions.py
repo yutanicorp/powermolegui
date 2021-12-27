@@ -32,14 +32,14 @@ Custom exception code for powermolegui.
 """
 from powermolelib import TransferAgent, Tunnel, BootstrapAgent, Instructor
 
-__author__ = '''Vincent Schouten <inquiry@intoreflection.co>'''
+__author__ = '''Vincent Schouten <powermole@protonmail.com>'''
 __docformat__ = '''google'''
 __date__ = '''06-04-2019'''
 __copyright__ = '''Copyright 2021, Vincent Schouten'''
 __credits__ = ["Vincent Schouten"]
 __license__ = '''MIT'''
 __maintainer__ = '''Vincent Schouten'''
-__email__ = '''<inquiry@intoreflection.co>'''
+__email__ = '''<powermole@protonmail.com>'''
 __status__ = '''Development'''  # "Prototype", "Development", "Production".
 
 
