@@ -55,3 +55,9 @@ History
 ------------------
 
 * Bump dependency to latest powermole library package
+
+
+0.2.7 (28-12-2021)
+------------------
+
+* Bump dependency to latest powermole library package, reword email address, and fix bug responsible for crashing when user hits Ctrl+C in shell
