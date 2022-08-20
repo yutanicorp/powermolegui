@@ -52,9 +52,9 @@ def main():
     This method holds what you want to execute when
     the script is run on command line.
     """
-    main_window = MainWindow()
     logger = logging.getLogger()  # Returns a logger (which enables log messages to be printed to the terminal)
     logger.setLevel(logging.DEBUG)
+    main_window = MainWindow()
     logging_win_handler = LoggingHandler(main_window)  # Handlers send the log records (created by loggers) to the GUI
     logger.addHandler(logging_win_handler)
     main_window.logging_win_handler = logging_win_handler

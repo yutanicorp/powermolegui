@@ -69,11 +69,37 @@ For Linux, install the following package on the *client*.
 * Tk interface library
   * dnf install python3-tkinter
 
-For macOS, install the following package on the *client*
+For macOS (Monterey), install the following package on the *client*.
 
 * Tk interface library
+  * /bin/bash -c " $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh ")
   * brew install tcl-tk
 
+If that doesn't work (ie. powermolegui breaks on startup), please resort to the fix below as the Tk interface library (shipped with system or brew) will be deprecated and or appears to be broken.
+
+* Install brew
+  * /bin/bash -c " $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh ")
+
+* Install brew packages
+  * brew install pyenv tcl-tk zlib bzip2 libiconv xz readline
+
+* Set environment
+  * export CFLAGS="-I$(brew --prefix xz)/include"
+  * export LDFLAGS="-L$(brew --prefix xz)/lib”
+  * export LDFLAGS="-L/usr/local/opt/tcl-tk/lib”
+  * export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
+* Install Python interpreters
+  * pyenv install 3.10.5
+  * pyenv global 3.10.5
+
+* Bypass system Python interpreter
+  * Append shell (~/.zshrc) with the following lines:
+    * export PYENV_ROOT="$HOME/.pyenv"
+    * command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    * eval "$(pyenv init -)"
+
+(And, install with pip the packages pipx and pipenv, and install with pipx the package powermolegui)
 
 ## Installation
 
