@@ -61,3 +61,9 @@ History
 ------------------
 
 * Bump dependency to latest powermole library package, reword email address, and fix bug responsible for crashing when user hits Ctrl+C in shell
+
+
+0.2.8 (20-08-2022)
+------------------
+
+* Document paragraph Requirements for macOS Monterey
