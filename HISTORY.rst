@@ -67,3 +67,9 @@ History
 ------------------
 
 * Document paragraph Requirements for macOS Monterey
+
+
+0.2.9 (21-08-2022)
+------------------
+
+* Fix unexpected indentation in README
