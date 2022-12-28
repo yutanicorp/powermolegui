@@ -606,9 +606,9 @@ class PatchSet(object):
 
     # ---- detect patch and patchset types ----
     for idx, p in enumerate(self.items):
-      self.items[idx].object_type = self._detect_type(p)
+      self.items[idx].type = self._detect_type(p)
 
-    types = set([p.object_type for p in self.items])
+    types = set([p.type for p in self.items])
     if len(types) > 1:
       self.type = MIXED
     else:
@@ -699,7 +699,7 @@ class PatchSet(object):
         # debug("    patch type = " + p.type)
         # debug("    source = " + p.source.)
         # debug("    target = " + p.target)
-      if p.object_type in (HG, GIT):
+      if p.type in (HG, GIT):
         # TODO: figure out how to deal with /dev/null entries
         debug("stripping a/ and b/ prefixes")
         if p.source != '/dev/null':
