@@ -73,3 +73,9 @@ History
 ------------------
 
 * Fix unexpected indentation in README
+
+
+0.2.10 (29-12-2022)
+-------------------
+
+* Fix security vulnerability in 3rd party package
