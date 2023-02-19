@@ -31,6 +31,7 @@ import sys
 import stat
 import tempfile
 import warnings
+import semver
 from contextlib import contextmanager
 from dataclasses import field
 from subprocess import Popen, PIPE, check_output, CalledProcessError
