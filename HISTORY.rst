@@ -79,3 +79,9 @@ History
 -------------------
 
 * Fix security vulnerability in 3rd party package
+
+
+0.2.11 (19-02-2023)
+-------------------
+
+* Fix development workflow
