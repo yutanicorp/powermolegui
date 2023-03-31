@@ -47,7 +47,7 @@ __status__ = '''Development'''  # "Prototype", "Development", "Production".
 LOGGER_BASENAME = '''powermolegui'''
 
 
-class LoggerMixin:  # pylint: disable=too-few-public-methods
+class LoggerMixin:
     """Contains a logger method for use by other classes."""
 
     def __init__(self):

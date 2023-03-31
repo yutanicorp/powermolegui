@@ -132,7 +132,7 @@ class ItemsGenerator(LoggerMixin):
         self._canvas.itemconfig('all', state='hidden')
         return client_item, host_items, connection_items, agent_item, packet_item, status_item
 
-    def show_landscape(self, canvas_items):  # pylint: disable=no-self-use
+    def show_landscape(self, canvas_items):
         """Shows the shapes of Client and Host(s).
 
         Modifying the scroll region only works after the items
@@ -215,7 +215,7 @@ class AgentAdapter:
         return True
 
 
-class SetupLink(LoggerMixin):  # pylint: disable=too-many-instance-attributes
+class SetupLink(LoggerMixin):
     """Establishes a connection to target destination host via intermediaries by starting various objects.
 
     This function also passes the instantiated objects to the StateManager, which
@@ -356,7 +356,7 @@ class SetupLink(LoggerMixin):  # pylint: disable=too-many-instance-attributes
         self._logger.info('Instructor has been executed')
 
 
-class StateVisualiser:  # pylint: disable=too-few-public-methods
+class StateVisualiser:
     """Shows the state of the encrypted tunnel by a banner and by visualising the packet flow."""
 
     def __init__(self, heartbeat, animated_packet, status_item):

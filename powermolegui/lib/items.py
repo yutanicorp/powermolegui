@@ -417,7 +417,7 @@ class HostCanvasItem(CanvasItem):
         self._host_effect.dim()
 
 
-class AgentCanvasItem(CanvasItem):  # pylint: disable=too-many-instance-attributes
+class AgentCanvasItem(CanvasItem):
     """Creates a canvas item representing an Agent."""
 
     def __init__(self, main_window, client_canvas_item, host_canvas_items):
@@ -526,7 +526,7 @@ class AgentCanvasItem(CanvasItem):  # pylint: disable=too-many-instance-attribut
         self._agent_effect.dim()
 
 
-class ConnectionCanvasItem(CanvasItem):  # pylint: disable=too-many-instance-attributes
+class ConnectionCanvasItem(CanvasItem):
     """Creates a canvas item representing a connection."""
 
     def __init__(self, main_window, canvas_item_1, canvas_item_2):

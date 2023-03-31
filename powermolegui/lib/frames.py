@@ -52,7 +52,7 @@ BACKGROUND_CANVAS = '#232729'
 
 # Bryan Oakley: I prefer inheriting from tk.Frame just because I typically
 # start by creating a frame, but it is by no means necessary.
-class MainFrame(tk.Frame):  # pylint: disable=too-many-ancestors
+class MainFrame(tk.Frame):
     """Constructs an outer frame that contains a canvas and a log frame."""
 
     def __init__(self, parent, scale, *args, **kwargs):  # parent = MainWindow
@@ -72,7 +72,7 @@ class MainFrame(tk.Frame):  # pylint: disable=too-many-ancestors
 # a widget and it creates other widgets, those widgets should always be children of
 # self or one of its descendants, never its own parent. Having a class put child
 # widgets in its parent completely defeats the purpose of inheriting from tk.Frame.
-class CanvasFrame(tk.Frame):  # pylint: disable=too-many-ancestors
+class CanvasFrame(tk.Frame):
     """Constructs a frame for the canvas widget."""
 
     def __init__(self, parent):  # what's the use of parent here?
@@ -147,7 +147,7 @@ class CanvasFrame(tk.Frame):  # pylint: disable=too-many-ancestors
             self.canvas_landscape.bind('<3>', lambda e: menu.post(e.x_root, e.y_root))  # On Windows and X1
 
 
-class LogFrame(tk.Frame):  # pylint: disable=too-many-ancestors
+class LogFrame(tk.Frame):
     """Constructs a frame for the text widget."""
 
     def __init__(self, parent):
@@ -182,7 +182,7 @@ class LogFrame(tk.Frame):  # pylint: disable=too-many-ancestors
         self.text.configure(state='disabled')
 
 
-class CommandFrame(tk.Frame):  # pylint: disable=too-many-ancestors
+class CommandFrame(tk.Frame):
     """Constructs an outer frame that contains two log frames."""
 
     def __init__(self, parent, *args, **kwargs):
@@ -197,7 +197,7 @@ class CommandFrame(tk.Frame):  # pylint: disable=too-many-ancestors
         self.command_response.pack(fill='both', expand=True)
 
 
-class CommandEntry(tk.Frame):  # pylint: disable=too-many-ancestors
+class CommandEntry(tk.Frame):
     """Constructs a frame for the text widget."""
 
     def __init__(self, parent):
@@ -217,7 +217,7 @@ class CommandEntry(tk.Frame):  # pylint: disable=too-many-ancestors
         return entry
 
 
-class CommandResponse(tk.Frame):  # pylint: disable=too-many-ancestors
+class CommandResponse(tk.Frame):
     """Constructs a frame for the text widget."""
 
     def __init__(self, parent):

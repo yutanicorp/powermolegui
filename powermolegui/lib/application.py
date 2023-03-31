@@ -127,7 +127,7 @@ def application(main_window):  # pylint: disable=too-many-locals
                     sleep(1)
     except SetupFailed as msg:  # defined in "powermoleguiexceptions", can only be raised by setup_link() in helpers
         LOGGER.error(msg)
-        raise SystemExit(1)
+        raise SystemExit(1) from msg
     finally:
         sleep(3)
         main_window.after(200, main_window.destroy)
