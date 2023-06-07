@@ -56,7 +56,7 @@ Follow these instructions to get Tkinter working on the *client*.
   * ``dnf install python3-tkinter``
 
 macOS (Ventura 13.4)
--------------------
+--------------------
 
 Follow these instructions to get Tkinter working with pyenv on the *client*.
 
