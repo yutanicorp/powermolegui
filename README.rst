@@ -36,7 +36,7 @@ Requirements (functional)
 
 * The client program only works on macOS and Linux (tested Red Hat, CentOS, Fedora).
 * The intermediate hosts (gateways) must be Linux.
-* The client and all hosts have Python >3.6 as their default interpreter.
+* The client and all hosts have Python >3.9 as their default interpreter.
 * You need *at least* 1 gateway.
 * You have the associated SSH identification file (i.e. the private key) for these intermediaries.
 * Due to security reasons, SSH password login is not supported.
@@ -46,50 +46,53 @@ Requirements (functional)
 Requirements (software)
 =======================
 
-For Linux, install the following package on the *client*.
+Linux
+-----
 
-* Tk interface library
+Follow these instructions to get Tkinter working on the *client*.
 
-  * dnf install python3-tkinter
+* Install Tk interface library
 
-For macOS (Monterey), install the following package on the *client*.
+  * ``dnf install python3-tkinter``
 
-* Tk interface library
+macOS (Ventura 13.4)
+-------------------
 
-  * /bin/bash -c " $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh ")
-  * brew install tcl-tk
+Follow these instructions to get Tkinter working with pyenv on the *client*.
 
-If that doesn't work (ie. powermolegui breaks on startup), please resort to the fix below as the Tk interface library (shipped with system or brew) will be deprecated and or appears to be broken.
+* Install Xcode
 
-* Install brew
+* Install Brew
 
-  * /bin/bash -c " $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh ")
+  * ``/bin/bash -c " $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh ")``
 
-* Install brew packages
+  * ``brew install pyenv``
 
-  * brew install pyenv tcl-tk zlib bzip2 libiconv xz readline
+* Download and install (ActiveTcl-8.6) Tcl/Tk libraries
 
-* Set environment
+  * The Tkinter module is included with core Python, but you'll need a version of Tcl/Tk on your system to compile it against.
 
-  * export CFLAGS="-I$(brew --prefix xz)/include"
-  * export LDFLAGS="-L$(brew --prefix xz)/lib”
-  * export LDFLAGS="-L/usr/local/opt/tcl-tk/lib”
-  * export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+    * Visit the ActiveState's website https://www.activestate.com/products/tcl/.
+    * Register and download Tcl/Tk libraries for free.
 
-* Install Python interpreters
+* Edit Zsh shell file
 
-  * pyenv install 3.10.5
-  * pyenv global 3.10.5
+  * Comment out any references to the system's Python interpreter
 
-* Bypass system Python interpreter
+  * Add the following lines:
 
-  * Append shell (~/.zshrc) with the following lines:
+    * ``export PYENV_ROOT="$HOME/.pyenv"``
+    * ``command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"``
+    * ``eval "$(pyenv init -)"``
 
-    * export PYENV_ROOT="$HOME/.pyenv"
-    * command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-    * eval "$(pyenv init -)"
+* Install Python interpreters (eg. 3.10.11)
 
-(And, install with pip the packages pipx and pipenv, and install with pipx the package powermolegui)
+  * ``pyenv install 3.10.11``
+  * ``pyenv global 3.10.11``
+
+* Test successful build of Python
+
+  * ``python -m tkinter -c 'tkinter._test()'``
 
 
 Installation
@@ -253,8 +256,7 @@ Instead use the provided build and upload scripts that create all the necessary 
 Documentation
 =============
 
-* Documentation: https://minitorcli.readthedocs.org/en/latest
-
+* Documentation: https://powermolegui.readthedocs.org/en/latest (2023-06-06: not available due to missing webhook)
 
 Contributing
 ============
@@ -265,7 +267,7 @@ Please read `CONTRIBUTING.md <https://gist.github.com/PurpleBooth/b24679402957c6
 Authors
 =======
 
-* **Vincent Schouten** - *Initial work* - `LINK <https://github.com/yutanicorp>`_
+* **Vincent Schouten** - `LINK <https://github.com/yutanicorp>`_
 
 See also the list of `contributors <https://github.com/your/project/contributors>`_ who participated in this project.
 
