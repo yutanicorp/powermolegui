@@ -97,3 +97,9 @@ History
 -------------------
 
 * Fix development workflow, and document paragraph about software requirements
+
+
+0.2.14 (08-06-2023)
+-------------------
+
+* Fix syntax error in documentation
