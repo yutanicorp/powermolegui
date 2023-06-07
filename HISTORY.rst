@@ -91,3 +91,9 @@ History
 -------------------
 
 * Fix security vulnerability, fix linting errors, bump dependency
+
+
+0.2.13 (07-06-2023)
+-------------------
+
+* Fix development workflow, and document paragraph about software requirements
