@@ -103,3 +103,9 @@ History
 -------------------
 
 * Fix syntax error in documentation
+
+
+0.2.15 (18-06-2023)
+-------------------
+
+* Document introductory paragraph and bump dependency to latest powermole library package
