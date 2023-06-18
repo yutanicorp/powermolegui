@@ -2,13 +2,31 @@
 powermole/gui
 ====================
 
-This program will let you perform port forwarding, redirect internet traffic, and
-transfer files to, and issue commands on, a host without making a direct connection
-(ie. via one or more intermediate hosts), which would undoubtedly compromise your privacy.
-This solution can only work when you or your peers own one or more hosts as this program
-communicates with SSH servers. This program can be viewed as a multi-versatile wrapper
-around SSH with the ProxyJump directive enabled. Powermole creates automatically a ssh/scp
-configuration file to enable key-based authentication with the intermediate hosts.
+This program will let you perform port forwarding, redirect internet traffic, and transfer files to, and issue commands on,
+a host without making a direct connection (ie. via one or more intermediate hosts), which would undoubtedly compromise your privacy.
+This solution can only work when you or your peers own one or more hosts as this program communicates with SSH servers.
+This program can be viewed as a multi-versatile wrapper around SSH with the ProxyJump directive enabled. 
+Powermole automatically creates a ssh/scp configuration file to enable key-based authentication with the intermediate hosts.
+
+Powermolegui provides two modes:
+
+* TOR mode
+
+  *  The target destination host acts as an exit node (in TOR terminology).
+
+* FOR(warding) mode
+
+  *  Connections are forwarded to the target destination host.
+
+Regardless which mode is enabled, several options are presented when the tunnel is established:
+
+* COMMAND
+
+  * This option provides a rudimentary terminal interface to provide access to OS services on the target destination host.
+
+* TRANSFER
+
+  * This options allows selected files to be transferred to the target destination host.
 
 
 How it works
@@ -144,7 +162,7 @@ To enable TOR mode
 ------------------
 
 Edit the JSON document in the configuration file to incorporate the keywords **mode**, **gateways**, **destination**, and *optionally* **application** (shown below) and **port**.
-When **application** is specified, then powermole will start the application of choice once the tunnel is ready.
+When **application** is specified, powermole will start the application of choice once the tunnel is ready.
 Please note, if an instance of that application (eg. Firefox) is already running, powermole will terminate immediately.
 In the example below, powermole drills through 2 intermediate hosts.
 Hitting Ctrl-C in terminal will dismantle the Tunnel (and stop the application).
@@ -198,7 +216,7 @@ Hitting Ctrl-C in terminal will dismantle the Tunnel.
 Error
 =====
 
-When running into issues, consider to investigate the log messages of type 'debug' sent to the shell and/or
+When running into issues, consider investigating the log messages of type 'debug' sent to the shell and/or
 consult the log file in /tmp on destination host.
 
 Development Workflow
@@ -256,7 +274,7 @@ Instead use the provided build and upload scripts that create all the necessary 
 Documentation
 =============
 
-* Documentation: https://powermolegui.readthedocs.org/en/latest (2023-06-06: not available due to missing webhook)
+* Documentation: https://powermolegui.readthedocs.org/en/latest
 
 Contributing
 ============
