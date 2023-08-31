@@ -5,7 +5,7 @@ powermole/gui
 This program will let you perform port forwarding, redirect internet traffic, and transfer files to, and issue commands on,
 a host without making a direct connection (ie. via one or more intermediate hosts), which would undoubtedly compromise your privacy.
 This solution can only work when you or your peers own one or more hosts as this program communicates with SSH servers.
-This program can be viewed as a multi-versatile wrapper around SSH with the ProxyJump directive enabled. 
+This program can be viewed as a multi-versatile wrapper around SSH with the ProxyJump directive enabled.
 Powermole automatically creates a ssh/scp configuration file to enable key-based authentication with the intermediate hosts.
 
 Powermolegui provides two modes:
@@ -265,7 +265,7 @@ Important Information
 This template is based on pipenv. In order to be compatible with requirements.txt so the actual created package can be used by any part of the existing python ecosystem some hacks were needed.
 So when building a package out of this **do not** simple call
 
-    $ python setup.py sdist bdist_egg
+    $ python setup.py sdist
 
 **as this will produce an unusable artifact with files missing.**
 Instead use the provided build and upload scripts that create all the necessary files in the artifact.

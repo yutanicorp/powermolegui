@@ -40,6 +40,7 @@ For the outside world, the web traffic seems to be originated from the last host
 Once the program states READY, a web browser of choice can be used to browse over the Internet.
 In this demo, two gateways (intermediate hosts) are involved ~~and option TRANSFER is selected~~.
 Note: the development of the TRANSFER option is discontinued.
+Consider resorting to my other package named [powermolecli](https://github.com/yutanicorp/powermolecli).
 
 [comment]: <> (During the demo, highlight the words "local port 8080 will be listening for web traffic")
 <img alt="powermole tor mode with transfer" src="img/executing_powermolegui_tor_2_gw_transfer.gif" width="650"/>
@@ -254,7 +255,7 @@ So the full workflow after git is initialized is:
 This template is based on pipenv. In order to be compatible with requirements.txt so the actual created package can be used by any part of the existing python ecosystem some hacks were needed.
 So when building a package out of this **do not** simple call
 
-    $ python setup.py sdist bdist_egg
+    $ python setup.py sdist
 
 ## Documentation
 
