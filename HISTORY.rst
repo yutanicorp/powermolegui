@@ -109,3 +109,9 @@ History
 -------------------
 
 * Document introductory paragraph and bump dependency to latest powermole library package
+
+
+0.2.16 (31-08-2023)
+-------------------
+
+* Add Read The Docs configuration file v2, fix development workflow step _upload, fix command-option, bump dependencies
